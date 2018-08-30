@@ -13,3 +13,9 @@ class Work(models.Model):
 
     def __str__(self):
         return self.title
+
+class Subscribe(models.Model):
+    email = models.EmailField(max_length=70,blank=True, null= True, unique= True)
+
+    def __str__(self):
+        return self.email

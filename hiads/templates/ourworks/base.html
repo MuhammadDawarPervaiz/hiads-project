@@ -5,7 +5,7 @@
 <!-- Mirrored from lolotshirt.com/demo/creatvi-agency-live/index-v5.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Jun 2018 18:39:15 GMT -->
 <head>
 	<meta charset="UTF-8">
-	<title>Home version v5</title>
+	<title>Hello Ads</title>
 	<!-- Font name -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900" rel="stylesheet">
 
@@ -20,6 +20,19 @@
 	<link rel="stylesheet" href="{% static 'css/style-home-v5.css' %}" />
 	<!-- Main css style  -->
 	<link rel="stylesheet" href="{% static 'css/responsive.css' %}" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<style media="screen">
+			.flash
+			{
+					position: absolute;
+					margin-top: 10px;
+					margin-left: 400px;
+					z-index: 10;
+			}
+	</style>
 
 </head>
 <body>
@@ -39,6 +52,17 @@
 				 <div class="col-lg-3 col-sm-6">
 					<div class="hero-logo"><img src="{% static 'img/Home-v5/logo.png' %}" alt="" /></div>
 				 </div>
+
+				{% if subscriberform.errors %}
+				  <div class="alert alert-danger text-center flash" role="alert">
+				      {{ subscriberform.errors.email }}
+				  </div>
+				{% endif %}
+				{% if message %}
+				  <div class="alert alert-success text-center flash" role="alert">
+				      <p>{{ message }}</p>
+				  </div>
+				{% endif %}
 
 				 <!-- Navigation here -->
 				 <div class="offset-lg-5 col-lg-3 col-sm-6">
@@ -92,11 +116,9 @@
 				<!-- about details -->
 				<div class="col-lg-5 col-md-6">
 					<div class="about-details">
-						<h3>There are many variations of <br />  passages of Lorem  Ipso.</h3>
-						<p>Must explain to you how all this mistaken idea of denouncing
-						pleasure and praising pain was born and I will give you a com
-						plete account of the system, and expound the.</p>
-						<p>Actual teachings of the great explorer of the truth, the master builder of human happiness. No one rejects, dislike.</p>
+						<h3>SOME OF OUR COMPANY <br /> DETAILS ARE AS FOLLOW</h3>
+						<p>Hello Ads is a Advertising Agency where creativity knows no bounds. Where passion is contagious and enthusiasm is endless. Where each new idea spawned pushes past ordinary, past the usual. A global agency which possesses the strategic skills, drive and ingenuity to thrive in today’s media driven culture.That’s what BIT SQUAD is.</p>
+						<p>We offer the best idea to advertise client’s brands and reach client’s target coverage by pinpointing those advertising medium that will bring the highest returns (ROI) and brand recall. We are fully equipped to satisfy your valuable clients and put a maximum efforts to deliver a phenomenon services.</p>
 					</div>
 					<div class="blow-text">
 						<h2>About <br /> Us</h2>
@@ -125,10 +147,8 @@
 				<!-- service details -->
 				<div class=" col-lg-6 col-md-6">
 					<div class="service-details">
-						<h3>There are many variations of <br /> passages of Lorem  Ipso.</h3>
-						<p>Must explain to you how all this mistaken idea of denouncing
-						pleasure and praising pain was born and I will give you a com
-						plete account of the system, and expound the.</p>
+						<h3>Giving Ultimate Services For <br />Ultimate Business</h3>
+						<p>We’re the brains behind some of the most exceptional campaigns ever done on Digital and endorsed by the platforms. Our team of dedicated employees work around the clock to manage your affairs and provide you with an unparalleled digital reach. We consider it our responsibility to enhance your brand name and take it to the next level. Your success means our success, and we like to be successful!.</p>
 					</div>
 					<div class="blow-text">
 						<h2>our <br /> SERVICES</h2>
@@ -138,7 +158,7 @@
 							<img src="{% static 'img/Home-v5/5.png' %}" alt="single service" />
 						</div>
 						<div class="single-service-details firsts">
-							<h2>Web Design</h2>
+							<h2>Marketing & advertising Strategy</h2>
 							<p>There are many variations of passa of Lorem
 							Ipsum availa but the ma jority have suffer
 							alteration nim kao na kere gon.</p>
@@ -157,7 +177,7 @@
 							<img src="{% static 'img/Home-v5/1.png' %}" alt="single service" />
 						</div>
 						<div class="single-service-details">
-							<h2>Web Design</h2>
+							<h2>Social Media</h2>
 							<p>There are many variations of passa of Lorem
 							Ipsum availa but the ma jority have suffer
 							alteration nim kao na kere gon.</p>
@@ -171,8 +191,8 @@
 							<img src="{% static 'img/Home-v5/2.png' %}" alt="single service" />
 						</div>
 						<div class="single-service-details">
-							<h2>Web Design</h2>
-								<p>There are many variations of passa of Lorem
+							<h2>Video & Radio Production</h2>
+							<p>There are many variations of passa of Lorem
 							Ipsum availa but the ma jority have suffer
 							alteration nim kao na kere gon.</p>
 						</div>
@@ -185,8 +205,8 @@
 							<img src="{% static 'img/Home-v5/3.png' %}" alt="single service" />
 						</div>
 						<div class="single-service-details">
-							<h2>Web Design</h2>
-								<p>There are many variations of passa of Lorem
+							<h2>Graphic Design</h2>
+							<p>There are many variations of passa of Lorem
 							Ipsum availa but the ma jority have suffer
 							alteration nim kao na kere gon.</p>
 						</div>
@@ -200,7 +220,63 @@
 						</div>
 						<div class="single-service-details">
 							<h2>Web Design</h2>
-								<p>There are many variations of passa of Lorem
+							<p>There are many variations of passa of Lorem
+							Ipsum availa but the ma jority have suffer
+							alteration nim kao na kere gon.</p>
+						</div>
+					</div>
+				</div>
+				<!-- single service image -->
+				<div class="col-lg-6">
+					<div class="single-service">
+						<div class="single-service-img">
+							<img src="{% static 'img/Home-v5/1.png' %}" alt="single service" />
+						</div>
+						<div class="single-service-details">
+							<h2>Media Baying</h2>
+							<p>There are many variations of passa of Lorem
+							Ipsum availa but the ma jority have suffer
+							alteration nim kao na kere gon.</p>
+						</div>
+					</div>
+				</div>
+				<!-- single service image -->
+				<div class="col-lg-6">
+					<div class="single-service">
+						<div class="single-service-img">
+							<img src="{% static 'img/Home-v5/1.png' %}" alt="single service" />
+						</div>
+						<div class="single-service-details">
+							<h2>Quality Printing</h2>
+							<p>There are many variations of passa of Lorem
+							Ipsum availa but the ma jority have suffer
+							alteration nim kao na kere gon.</p>
+						</div>
+					</div>
+				</div>
+				<!-- single service image -->
+				<div class="col-lg-6">
+					<div class="single-service">
+						<div class="single-service-img">
+							<img src="{% static 'img/Home-v5/1.png' %}" alt="single service" />
+						</div>
+						<div class="single-service-details">
+							<h2>Presentation</h2>
+							<p>There are many variations of passa of Lorem
+							Ipsum availa but the ma jority have suffer
+							alteration nim kao na kere gon.</p>
+						</div>
+					</div>
+				</div>
+				<!-- single service image -->
+				<div class="col-lg-6">
+					<div class="single-service">
+						<div class="single-service-img">
+							<img src="{% static 'img/Home-v5/1.png' %}" alt="single service" />
+						</div>
+						<div class="single-service-details">
+							<h2>Publications</h2>
+							<p>There are many variations of passa of Lorem
 							Ipsum availa but the ma jority have suffer
 							alteration nim kao na kere gon.</p>
 						</div>
@@ -222,8 +298,8 @@
 				<div class="col-lg-12">
 					<div class="section-title">
 						<div class="title">
-							<h3>There are many variations of <br />
-							passages of Lorem Ipso.</h3>
+							<h3>Creating Products and Services That Transforms Brands. <br />
+							Go Through Our Portfolio.</h3>
 						</div>
 						<div class="box-title">
 							<h2>OUR WORKS</h2>
@@ -232,42 +308,23 @@
 				</div>
 				<!-- gallery area start -->
 				<div class="col-lg-12">
-					<div class="portfollio col-md-12">
-					  <div class="head">
+          <div class="portfollio col-md-12">
+            <div class="head">
+            <span>all</span>
 						{% for category in categories.all %}
-						<span>{{ category.name }}</span>
+						<span>{{ category.name|lower }}</span>
 						{% endfor %}
-					  </div>
-					</div>
-					<div class="photo">
+            </div>
+          </div>
+          <div class="photo">
 						{% for work in works.all %}
 					  <div class="tab">
 						<img src="{{ work.image.url }}" alt="gallery image">
-						<h2>{{ work.title }}Web Design</h2>
+						<h2>{{ work.category|title }}</h2>
 					  </div>
 						{% endfor %}
-					  <div class="tab">
-						<img src="{% static 'img/Home-v5/b2.jpg' %}" alt="gallery image">
-						<h2>Web Design</h2>
-					  </div>
-					  <div class="tab">
-						<img src="{% static 'img/Home-v5/b3.jpg' %}" alt="gallery image">
-						<h2>icons</h2>
-					  </div>
-					  <div class="tab">
-						<img src="{% static 'img/Home-v5/b4.jpg' %}" alt="gallery image">
-						<h2>Web Design</h2>
-					  </div>
-					  <div class="tab">
-						<img src="{% static 'img/Home-v5/b5.jpg' %}" alt="gallery image">
-						<h2>App Design</h2>
-					  </div>
-					  <div class="tab">
-						<img src="{% static 'img/Home-v5/b6.jpg' %}" alt="gallery image">
-						<h2>icons</h2>
-					  </div>
-					</div>
-				</div>
+          </div>
+        </div>
 				<!-- end gallery -->
 			</div>
 		</div>
@@ -289,7 +346,7 @@
 							passages of Lorem Ipso.</h3>
 						</div>
 						<div class="box-title">
-							<h2>OUR BLOG</h2>
+							<h2>OUR CLIENTS</h2>
 						</div>
 					</div>
 				</div>
@@ -299,23 +356,17 @@
 				</div>
 				<div class="col-lg-7 col-md-6 col-sm-12">
 					<div class="single-blog-details">
-						<h2>There are many variations of <br />
-						passages of Lorem Ipso.</h2>
-						<p>Must explain to you how all this mistaken idea of denouncing <br />
-						pleasure and praising pain was born and I will give you a com <br />
-						plete account of the system, and expound the.</p>
-						<a href="#">Learn More <i class="fal fa-long-arrow-right"></i> </a>
+						<h2>MEDIA & MARKETING RESEARCH <br />
+						Creativity As Smart As You Think</h2>
+						<p>Hello Ads is a multi-platform branding agency. We serve clients ranging from national retailers and consumer products to international non-profit organizations and regional faith-based ministries.</p><p>We conduct on demand research on various media aspects, specifically related to target audience and market requirements of different brands. Our expert research team conducts surveys through questioners, focus groups and through other methodologies pertinent to client's need. We use both qualitative and quantitative methodologies to serve our clients need.</p>
 					</div>
 				</div>
 				<!-- single details -->
 				<div class="col-lg-7 col-md-6 col-sm-12">
 					<div class="single-blog-details">
-						<h2>There are many variations of <br />
-						passages of Lorem Ipso.</h2>
-						<p>Must explain to you how all this mistaken idea of denouncing <br />
-						pleasure and praising pain was born and I will give you a com <br />
-						plete account of the system, and expound the.</p>
-						<a href="#">Learn More <i class="fal fa-long-arrow-right"></i> </a>
+						<h2>To check out our campains <br />
+						and way of campins with results</h2>
+						<p>Visit our blog to see our success storis and get in touch with our events and recent campain click  the button below to visit blog</p>
 						<br />
 						<button class="btn-enjoy">VISIT BLOG PAGE</button>
 					</div>
@@ -339,8 +390,8 @@
 				<div class="col-lg-12">
 					<div class="section-title">
 						<div class="title">
-							<h3>There are many variations of <br />
-							passages of Lorem Ipso.</h3>
+							<h3>Please read the following <br />
+							to get what clients think about us</h3>
 						</div>
 						<div class="box-title">
 							<h2>TESTIMONIAL</h2>
@@ -418,22 +469,26 @@
 				<!-- contact box -->
 				<div class="offset-lg-1 col-lg-10">
 					<div class="contact-box">
-						<form>
-							<input type="text" class="small-input"  placeholder="Your Name"/>
-							<input type="email" class="small-input"  placeholder="Email Here"/>
-							<textarea placeholder="Message" class="message" name="message" id="message" cols="30" rows="3"></textarea>
+						<form action="{% url 'home' %}" method="post">
+							{% csrf_token %}
+							{{ contactform.name }}
+							{{ contactform.email }}
+							{{ contactform.message }}
 							<button class="btn-enjoy">SEND</button>
 						</form>
 					</div>
 					<div class="subscriber">
-						<input type="text" class="subx" placeholder="Your Email" /> <button class="btn-send">SUBSCRIBE</button>
+						<form action="{% url 'home' %}" method="post">
+							{% csrf_token %}
+							{{ subscriberform.email }} <button type="submit" class="btn-send">SUBSCRIBE</button>
+						</form>
 					</div>
 				</div>
 				<div class="offset-lg-1 col-lg-10">
 					<div class="row">
 						<div class="col-lg-6">
 							<div class="copy-right">
-								<p>&copy; All Rights Reserved by Avabil.</p>
+								<p>&copy; All Rights Reserved by Hello Ads.</p>
 							</div>
 						</div>
 						<div class="col-lg-6">
@@ -448,6 +503,22 @@
 					</div>
 				</div>
 			</div>
+		</div>
+
+		<!-- Load Facebook SDK for JavaScript -->
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+
+		<!-- Your customer chat code -->
+		<div class="fb-customerchat"
+		  attribution=setup_tool
+		  page_id="604492499948527">
 		</div>
 			<!-- single details right shape -->
 		<div class="contact-shape-right-image">
@@ -472,6 +543,13 @@
 	<script src="{% static 'js/owl.carousel.min.js' %}"></script>
 	<!-- main js file -->
 	<script src="{% static 'js/plugin-v5.js' %}"></script>
+
+	<script>
+	    $(function()
+	    {
+	        $('.flash').delay(200).fadeIn(10000).delay(2000).fadeOut(1000);
+	    });
+	</script>
 </body>
 
 <!-- Mirrored from lolotshirt.com/demo/creatvi-agency-live/index-v5.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Jun 2018 18:40:50 GMT -->
