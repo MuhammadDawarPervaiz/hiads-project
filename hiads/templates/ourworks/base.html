@@ -58,6 +58,11 @@
 				      {{ subscriberform.errors.email }}
 				  </div>
 				{% endif %}
+				{% if contactform.errors %}
+				  <div class="alert alert-danger text-center flash" role="alert">
+				      {{ subscriberform.errors }}
+				  </div>
+				{% endif %}
 				{% if message %}
 				  <div class="alert alert-success text-center flash" role="alert">
 				      <p>{{ message }}</p>
