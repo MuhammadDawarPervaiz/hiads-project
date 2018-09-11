@@ -16,6 +16,7 @@ class Work(models.Model):
 
 class Subscribe(models.Model):
     email = models.EmailField(max_length=70,blank=True, null= True, unique= True)
+    created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.email
+        return self.email + " - " + self.created.strftime('%m/%d/%Y - %H:%M:%S')
