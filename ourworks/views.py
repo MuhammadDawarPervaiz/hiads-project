@@ -28,14 +28,14 @@ def home(request):
             email = contactform.cleaned_data['email']
             message = contactform.cleaned_data['message']
 
-            """
+
             send_mail(
                 'Contact Form',
                 name + '\n\n' + message,
                 email,
                 ['m.dawarpervaiz@gmail.com'],
                 fail_silently=False,
-            )"""
+            )
 
 
             message = 'You Message has been sent successfully'
