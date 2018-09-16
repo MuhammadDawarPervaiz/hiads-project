@@ -541,7 +541,29 @@
 	<!-- bootstrap js  -->
 	<script src="{% static 'js/bootstrap.min.js' %}"></script>
 	<!-- filter js  -->
-	<script src="{% static 'js/filter.js' %}"></script>
+	<!--<script src="{% static 'js/filter.js' %}"></script>-->
+	<script>
+			$(document).ready(function() {
+
+					$('span:contains("all")').addClass('active');
+
+					$('span:contains("all")').click(function() {
+					$('span:not(:contains("all"))').removeClass('active');
+						$(this).addClass('active');
+						$('.tab').show(500)
+					});
+
+					{% for category in categories.all %}
+					$('span:contains("{{ category.name|lower }}")').click(function() {
+						$('span:not(:contains("{{ category.name|lower }}"))').removeClass('active');
+						$(this).addClass('active');
+						$('.tab:contains("{{ category.name|title }}")').show(500);
+						$('.tab:not(:contains("{{ category.name|title }}"))').hide(500);
+
+					});
+					{% endfor %}
+			});
+	</script>
 	<!-- script js  -->
 	<script src="{% static 'js/script.js' %}"></script>
 	<!-- carousel js  -->
@@ -555,6 +577,7 @@
 	        $('.flash').delay(200).fadeIn(10000).delay(2000).fadeOut(1000);
 	    });
 	</script>
+
 </body>
 
 <!-- Mirrored from lolotshirt.com/demo/creatvi-agency-live/index-v5.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Jun 2018 18:40:50 GMT -->
