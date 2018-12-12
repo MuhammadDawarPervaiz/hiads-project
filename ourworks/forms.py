@@ -29,6 +29,20 @@ class ContactForm(forms.Form):
             'type':'email',
         }
     ))
+    contactNo = forms.CharField(widget = forms.TextInput(
+        attrs = {
+            'class': 'small-input',
+            'placeholder':'Your Contact Number',
+            'type':'text',
+        }
+    ))
+    brandName = forms.CharField(widget = forms.TextInput(
+        attrs = {
+            'class': 'small-input',
+            'placeholder':'Your Brand Name',
+            'type':'text',
+        }
+    ))
     message = forms.CharField(widget = forms.Textarea(
         attrs = {
             'class': 'message',
